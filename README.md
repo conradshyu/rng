@@ -6,8 +6,8 @@ Written by [Conrad Shyu](mailto:conradshyu@hotmail.com)<br>
 
 ## Synopsis
 
-This C# implementation generates random number of various, well-known probability distributions. Specifically,
-this implementation supports the following continuous probability distributions:
+This C# implementation generates random numbers from several well-known probability distributions. It supports
+the following continuous probability distributions:
 
 - Beta, with default parameters shape 2 and 5
 - Cauchy, with default parameters location 0.0 and scale 1.0
@@ -23,25 +23,31 @@ this implementation supports the following continuous probability distributions:
 - Uniform, with default minimum 0.0 and maximum 1.0
 - Weibull, with default parameters scale 1.0 and shape 1.0
 
-All the equations for generators, except Gamma, are analytical derived either using the inverse CDF (cumulative
-distribution function) or transformation. The random numbers generated based on the inverse CDF are guaranteed to
-follow the designated distribution. The Gamma random number generator, on the other hand, is based on the
-Marsaglia and Tsang's method. This method is also implemented in GSL (Gnu Scientific Library). The equation for
-Normal or Gaussian distribution is derived from the bivariate normal distribution, instead of univariate. The
-derivation is based on the Box-Muller transformation.
+The discrete Bernoulli distribution is also supported, with default probability 0.5. Most generators use inverse-CDF
+or transformation methods; the Gamma generator uses the Marsaglia-Tsang method. Normal (Gaussian) samples are
+generated using the Box-Muller transformation.
 
 | Filename | Description |
 | --- | --- |
 | `random.cs` | C# implementation of random number generators |
 | `README.md` | this file |
+| `LICENSE` | GNU General Public License, version 3 or later |
+| `euclid.aoms.1177706645.pdf` | Box-Muller reference paper |
+| `ziggurat.pdf` | Ziggurat reference paper |
 
-To compile the source code, simply type:
+Compile the source code with the .NET C# compiler:
 
-`csc /out:random.exe random.cs`
+```text
+csc /out:random.exe random.cs
+```
 
-or, alternatively, on Ubuntu with Mono
+Or, on Ubuntu with Mono:
 
-`mcs /out:random.exe random.cs`
+```text
+mcs /out:random.exe random.cs
+```
+
+Running the compiled program prints 100 Gamma-distributed samples (shape 0.5, rate 1.0).
 
 ## Reference
 - GEP Box, Muller M (1958) A note on the generation of random normal deviates. *Annual of Mathematical Statistics*,
