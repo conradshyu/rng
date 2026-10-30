@@ -5,6 +5,7 @@ Written by [Conrad Shyu](mailto:conradshyu@hotmail.com)<br>
 *last updated on July 5, 2020*
 
 ## Synopsis
+
 This C# implementation generates random number of various, well-known probability distributions. Specifically,
 this implementation supports the following continuous probability distributions:
 
@@ -42,26 +43,8 @@ or, alternatively, on Ubuntu with Mono
 
 `mcs /out:random.exe random.cs`
 
-## Author's Comments
-Please report any problems or send comments to [me](mailto:conradshyu@hotmail.com).
-
 ## Reference
 - GEP Box, Muller M (1958) A note on the generation of random normal deviates. *Annual of Mathematical Statistics*,
 29(2): 610-611. [doi:10.1214/aoms/1177706645](http://projecteuclid.org/euclid.aoms/1177706645).
 - Marsaglia G, Tsang WW (2000) The Ziggurat method for generating random variables. *Journal of Statistical Software*,
 5(8). <http://www.jstatsoft.org/v05/i08>.
-
-Copyright (C) 2015 [Conrad Shyu](mailto:conradshyu@hotmail.com)<br>
-Richmond, Virginia 23223
-
-## License
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
-License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any
-later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
-warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
-details.
-
-You should have received a copy of the GNU General Public License along with this program. If not, see
-<http://www.gnu.org/licenses/>.
